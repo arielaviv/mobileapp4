@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/studentsListFragment"
-        android:name="com.arielaviv.studentsapp.StudentsListFragment"
+        android:name="com.company.assignment4.StudentsListFragment"
         android:label="@string/students_list_title"
         tools:layout="@layout/fragment_students_list">
 
@@ -22,13 +22,13 @@
 
     <fragment
         android:id="@+id/newStudentFragment"
-        android:name="com.arielaviv.studentsapp.NewStudentFragment"
+        android:name="com.company.assignment4.NewStudentFragment"
         android:label="@string/new_student_title"
         tools:layout="@layout/fragment_new_student" />
 
     <fragment
         android:id="@+id/studentDetailsFragment"
-        android:name="com.arielaviv.studentsapp.StudentDetailsFragment"
+        android:name="com.company.assignment4.StudentDetailsFragment"
         android:label="@string/student_details_title"
         tools:layout="@layout/fragment_student_details">
 
@@ -43,7 +43,7 @@
 
     <fragment
         android:id="@+id/editStudentFragment"
-        android:name="com.arielaviv.studentsapp.EditStudentFragment"
+        android:name="com.company.assignment4.EditStudentFragment"
         android:label="@string/edit_student_title"
         tools:layout="@layout/fragment_edit_student">
 
