@@ -2,6 +2,24 @@
 <resources>
     <string name="app_name">Students App</string>
 
+    <!-- Auth -->
+    <string name="login_title">Login</string>
+    <string name="register_title">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="go_to_register">Don\'t have an account? Register</string>
+    <string name="go_to_login">Already have an account? Login</string>
+    <string name="login_failed">Login failed</string>
+    <string name="register_failed">Registration failed</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="error_empty_email">Email cannot be empty</string>
+    <string name="error_empty_password">Password cannot be empty</string>
+    <string name="error_short_password">Password must be at least 6 characters</string>
+    <string name="error_passwords_mismatch">Passwords do not match</string>
+
     <!-- Students List -->
     <string name="students_list_title">Students</string>
     <string name="add_student">Add Student</string>
@@ -39,4 +57,8 @@
     <string name="error_empty_name">Name cannot be empty</string>
     <string name="error_empty_id">ID cannot be empty</string>
     <string name="error_duplicate_id">Student with this ID already exists</string>
+
+    <!-- Image -->
+    <string name="select_image">Select Image</string>
+    <string name="uploading_image">Uploading image…</string>
 </resources>
