@@ -17,20 +17,34 @@
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:layout_marginTop="16dp"
-            android:contentDescription="@string/student_name"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="@string/select_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_student_avatar" />
+
+        <TextView
+            android:id="@+id/textViewSelectImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/select_image"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewAvatar" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutName"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:hint="@string/student_name"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewAvatar">
+            app:layout_constraintTop_toBottomOf="@+id/textViewSelectImage">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextName"
@@ -141,6 +155,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayoutBirthTime" />
 
         <LinearLayout
+            android:id="@+id/buttonsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -176,6 +191,16 @@
                 android:text="@string/save" />
 
         </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonsLayout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
