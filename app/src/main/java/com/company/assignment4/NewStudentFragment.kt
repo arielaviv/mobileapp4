@@ -201,8 +201,8 @@ class NewStudentFragment : Fragment() {
                     // Upload to Firebase
                     try {
                         imageUrl = repository.uploadImage(uri, studentId)
-                    } catch (_: Exception) {
-                        // Upload failed, will use local image
+                    } catch (e: Exception) {
+                        // upload failed, use local
                     }
                 }
 

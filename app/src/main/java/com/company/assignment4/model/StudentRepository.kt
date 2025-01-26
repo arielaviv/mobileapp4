@@ -24,8 +24,8 @@ class StudentRepository(
                 val entities = students.map { it.toEntity() }
                 studentDao.deleteAll()
                 studentDao.insertAll(entities)
-            } catch (_: Exception) {
-                // Offline — use cached data
+            } catch (e: Exception) {
+                // no network, use local cache
             }
         }
     }
@@ -41,8 +41,8 @@ class StudentRepository(
             studentDao.insertStudent(student.toEntity())
             try {
                 firebaseManager.addStudent(student)
-            } catch (_: Exception) {
-                // Will sync later
+            } catch (e: Exception) {
+                // ignore, saved locally
             }
         }
     }
@@ -56,7 +56,6 @@ class StudentRepository(
             try {
                 firebaseManager.updateStudent(oldId, student)
             } catch (_: Exception) {
-                // Will sync later
             }
         }
     }
@@ -66,8 +65,8 @@ class StudentRepository(
             studentDao.deleteStudent(id)
             try {
                 firebaseManager.deleteStudent(id)
-            } catch (_: Exception) {
-                // Will sync later
+            } catch (e: Exception) {
+                // failed to delete remotely
             }
         }
     }
@@ -80,7 +79,7 @@ class StudentRepository(
             try {
                 firebaseManager.updateStudent(id, updated.toStudent())
             } catch (_: Exception) {
-                // Will sync later
+                // ok, local db is updated
             }
         }
     }

@@ -266,8 +266,8 @@ class EditStudentFragment : Fragment() {
                     localImagePath = saveImageLocally(uri, newId)
                     try {
                         imageUrl = repository.uploadImage(uri, newId)
-                    } catch (_: Exception) {
-                        // Upload failed, will use local image
+                    } catch (e: Exception) {
+                        // couldn't upload, keep local path
                     }
                 }
 
