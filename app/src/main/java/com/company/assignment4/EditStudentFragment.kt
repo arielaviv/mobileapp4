@@ -108,7 +108,6 @@ class EditStudentFragment : Fragment() {
             }
 
             originalStudent?.let { student ->
-                // Load image with Glide
                 val imageSource = student.localImagePath.ifEmpty { student.imageUrl }
                 if (imageSource.isNotEmpty()) {
                     Glide.with(this@EditStudentFragment)
@@ -264,11 +263,6 @@ class EditStudentFragment : Fragment() {
 
                 selectedImageUri?.let { uri ->
                     localImagePath = saveImageLocally(uri, newId)
-                    try {
-                        imageUrl = repository.uploadImage(uri, newId)
-                    } catch (e: Exception) {
-                        // couldn't upload, keep local path
-                    }
                 }
 
                 val updatedStudent = Student(

@@ -40,7 +40,6 @@ class LoginFragment : Fragment() {
 
         firebaseManager = (requireActivity().application as StudentsApplication).firebaseManager
 
-        // Skip login if already authenticated
         if (firebaseManager.currentUser != null) {
             findNavController().navigate(R.id.action_loginFragment_to_studentsListFragment)
             return

@@ -196,14 +196,7 @@ class NewStudentFragment : Fragment() {
                 var localImagePath = ""
 
                 selectedImageUri?.let { uri ->
-                    // Save locally
                     localImagePath = saveImageLocally(uri, studentId)
-                    // Upload to Firebase
-                    try {
-                        imageUrl = repository.uploadImage(uri, studentId)
-                    } catch (e: Exception) {
-                        // upload failed, use local
-                    }
                 }
 
                 val student = Student(

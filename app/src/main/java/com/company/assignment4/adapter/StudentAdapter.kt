@@ -33,7 +33,6 @@ class StudentAdapter(
     override fun onBindViewHolder(holder: StudentViewHolder, position: Int) {
         val student = students[position]
 
-        // Load image with Glide
         val imageSource = student.localImagePath.ifEmpty { student.imageUrl }
         if (imageSource.isNotEmpty()) {
             Glide.with(holder.itemView.context)
@@ -49,11 +48,9 @@ class StudentAdapter(
         holder.textViewName.text = student.name
         holder.textViewId.text = "ID: ${student.id}"
 
-        // Remove listener before setting checked state to avoid triggering callback
         holder.checkBoxStudent.setOnCheckedChangeListener(null)
         holder.checkBoxStudent.isChecked = student.isChecked
 
-        // Set up click listeners
         holder.itemView.setOnClickListener {
             onItemClick(student)
         }

@@ -111,7 +111,6 @@ class StudentDetailsFragment : Fragment() {
     }
 
     private fun displayStudent(student: Student) {
-        // Load image with Glide
         val imageSource = student.localImagePath.ifEmpty { student.imageUrl }
         if (imageSource.isNotEmpty()) {
             Glide.with(this)
