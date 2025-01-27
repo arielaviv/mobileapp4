@@ -16,7 +16,6 @@ class FirebaseManager {
 
     private val studentsCollection = firestore.collection("students")
 
-    // Auth
     val currentUser: FirebaseUser? get() = auth.currentUser
 
     suspend fun signIn(email: String, password: String): FirebaseUser? {
@@ -33,7 +32,6 @@ class FirebaseManager {
         auth.signOut()
     }
 
-    // Firestore
     suspend fun getAllStudents(): List<Student> {
         val snapshot = studentsCollection.get().await()
         return snapshot.documents.mapNotNull { doc ->
@@ -63,14 +61,12 @@ class FirebaseManager {
         studentsCollection.document(id).delete().await()
     }
 
-    // Storage
     suspend fun uploadImage(imageUri: Uri, studentId: String): String {
         val ref = storage.reference.child("student_images/$studentId.jpg")
         ref.putFile(imageUri).await()
         return ref.downloadUrl.await().toString()
     }
 
-    // Helper classes
     data class StudentFirestoreModel(
         val name: String = "",
         val phone: String = "",
