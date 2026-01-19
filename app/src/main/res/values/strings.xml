@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Students App</string>
+
+    <!-- Students List -->
+    <string name="students_list_title">Students</string>
+    <string name="add_student">Add Student</string>
+
+    <!-- New Student -->
+    <string name="new_student_title">New Student</string>
+    <string name="student_name">Name</string>
+    <string name="student_id">ID</string>
+    <string name="student_phone">Phone</string>
+    <string name="student_address">Address</string>
+    <string name="student_checked">Checked</string>
+    <string name="student_birth_date">Birth Date</string>
+    <string name="student_birth_time">Birth Time</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+
+    <!-- Dialogs -->
+    <string name="success">Success</string>
+    <string name="student_saved_successfully">Student saved successfully</string>
+    <string name="ok">OK</string>
+    <string name="delete_confirmation_title">Delete Student</string>
+    <string name="delete_confirmation_message">Are you sure you want to delete this student?</string>
+
+    <!-- Student Details -->
+    <string name="student_details_title">Student Details</string>
+    <string name="edit">Edit</string>
+    <string name="checked_status">Status: Checked</string>
+    <string name="unchecked_status">Status: Not Checked</string>
+
+    <!-- Edit Student -->
+    <string name="edit_student_title">Edit Student</string>
+    <string name="delete">Delete</string>
+
+    <!-- Validation -->
+    <string name="error_empty_name">Name cannot be empty</string>
+    <string name="error_empty_id">ID cannot be empty</string>
+    <string name="error_duplicate_id">Student with this ID already exists</string>
+</resources>
