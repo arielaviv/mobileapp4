@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/studentsListFragment">
+
+    <fragment
+        android:id="@+id/studentsListFragment"
+        android:name="com.arielaviv.studentsapp.StudentsListFragment"
+        android:label="@string/students_list_title"
+        tools:layout="@layout/fragment_students_list">
+
+        <action
+            android:id="@+id/action_studentsListFragment_to_newStudentFragment"
+            app:destination="@id/newStudentFragment" />
+
+        <action
+            android:id="@+id/action_studentsListFragment_to_studentDetailsFragment"
+            app:destination="@id/studentDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newStudentFragment"
+        android:name="com.arielaviv.studentsapp.NewStudentFragment"
+        android:label="@string/new_student_title"
+        tools:layout="@layout/fragment_new_student" />
+
+    <fragment
+        android:id="@+id/studentDetailsFragment"
+        android:name="com.arielaviv.studentsapp.StudentDetailsFragment"
+        android:label="@string/student_details_title"
+        tools:layout="@layout/fragment_student_details">
+
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_studentDetailsFragment_to_editStudentFragment"
+            app:destination="@id/editStudentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editStudentFragment"
+        android:name="com.arielaviv.studentsapp.EditStudentFragment"
+        android:label="@string/edit_student_title"
+        tools:layout="@layout/fragment_edit_student">
+
+        <argument
+            android:name="studentId"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
